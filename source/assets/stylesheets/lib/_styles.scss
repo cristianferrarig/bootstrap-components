@@ -1,0 +1,27 @@
+* {
+  @include box-sizing(border-box);
+}
+
+$base-color: #FBFAFA;
+//body {
+//  background: #d4d4d4 url("../images/background.png");
+//  text-align: center;
+//  font-family: sans-serif;
+//}
+
+
+.component {
+  border: 1px solid darken($base-color,10%);
+  border-width: 0 1px 1px 0;
+  padding: 0;
+  div {
+    padding: 30px;
+  }
+}
+.demo {
+  border-bottom: 1px solid darken($base-color,10%);
+  background-color: #FFF;
+}
+.code {
+  background-color: $base-color;
+}
