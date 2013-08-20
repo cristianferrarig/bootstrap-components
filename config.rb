@@ -42,9 +42,21 @@
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def some_helper
-    "Helping"
+
+  def component(tags, &block)
+    content = capture(&block)
+    view = Haml::Engine.new(content).render
+
+    content_tag("div", view, :class => "preview") +
+    content_tag("pre", :class => "haml prettyprint linenums") do
+      content
+    end +
+    content_tag("pre", :class => "html prettyprint linenums") do
+      h view
+    end +
+    content_tag("div", tags, :class => "tags")
   end
+
 end
 
 set :css_dir, 'assets/stylesheets'

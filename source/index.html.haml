@@ -4,9 +4,10 @@ body_class: index
 ---
 
 %div
-  - 4.times do
-    .component.col-4
-      .demo
-        %p Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-      .code
-        code
+  .component.col-md-8
+    = component "tag td sad" do
+      :plain
+        %blockquote.align-center
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          %img.img-circle{"data-src" => "assets/javascript/vendor/holder.js/100x100"}
+          %small Someone famous in <cite title="Source Title">Source Title</cite>
